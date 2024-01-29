@@ -35,6 +35,7 @@ class ThreatLists extends \Google\Service\Resource
    *
    * @param array $optParams Optional parameters.
    * @return GoogleSecuritySafebrowsingV4ListThreatListsResponse
+   * @throws \Google\Service\Exception
    */
   public function listThreatLists($optParams = [])
   {

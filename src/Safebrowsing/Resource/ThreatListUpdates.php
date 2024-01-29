@@ -37,6 +37,7 @@ class ThreatListUpdates extends \Google\Service\Resource
    * @param GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponse
+   * @throws \Google\Service\Exception
    */
   public function fetch(GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequest $postBody, $optParams = [])
   {

@@ -39,6 +39,7 @@ class EncodedFullHashes extends \Google\Service\Resource
    * the client implementation of the Safe Browsing API.
    * @opt_param string clientVersion The version of the client implementation.
    * @return GoogleSecuritySafebrowsingV4FindFullHashesResponse
+   * @throws \Google\Service\Exception
    */
   public function get($encodedRequest, $optParams = [])
   {
