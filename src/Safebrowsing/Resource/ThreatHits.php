@@ -37,6 +37,7 @@ class ThreatHits extends \Google\Service\Resource
    * @param GoogleSecuritySafebrowsingV4ThreatHit $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function create(GoogleSecuritySafebrowsingV4ThreatHit $postBody, $optParams = [])
   {

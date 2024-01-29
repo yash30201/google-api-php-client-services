@@ -37,6 +37,7 @@ class FullHashes extends \Google\Service\Resource
    * @param GoogleSecuritySafebrowsingV4FindFullHashesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleSecuritySafebrowsingV4FindFullHashesResponse
+   * @throws \Google\Service\Exception
    */
   public function find(GoogleSecuritySafebrowsingV4FindFullHashesRequest $postBody, $optParams = [])
   {

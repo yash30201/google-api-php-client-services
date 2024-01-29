@@ -40,6 +40,7 @@ class EncodedUpdates extends \Google\Service\Resource
    * implementation of the Safe Browsing API.
    * @opt_param string clientVersion The version of the client implementation.
    * @return GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponse
+   * @throws \Google\Service\Exception
    */
   public function get($encodedRequest, $optParams = [])
   {

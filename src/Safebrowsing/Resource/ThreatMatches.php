@@ -37,6 +37,7 @@ class ThreatMatches extends \Google\Service\Resource
    * @param GoogleSecuritySafebrowsingV4FindThreatMatchesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleSecuritySafebrowsingV4FindThreatMatchesResponse
+   * @throws \Google\Service\Exception
    */
   public function find(GoogleSecuritySafebrowsingV4FindThreatMatchesRequest $postBody, $optParams = [])
   {
