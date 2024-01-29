@@ -1,8 +1,8 @@
 on:
-  schedule:
-    # daily at 12:30 am
-    - cron: '30 0 * * *'
-  workflow_dispatch:
+  push:
+    branches:
+      - main
+
 
 name: codegen
 jobs:
@@ -25,7 +25,7 @@ jobs:
               "two": [],
             };
             for (let i = 0; i < services.length; i++) {
-              if (!["discovery", "websecurityscanner"].includes(services[i])) {
+              if (["safebrowsing"].includes(services[i])) {
                 j = i < (services.length/2) ? "one" : "two";
                 result[j].push(services[i])
               }
@@ -55,7 +55,7 @@ jobs:
           python-version: "3.10"
       - id: find-preferred-versions
         run: |
-          versions=$( cat discovery-artifact-manager/discoveries/index.json | jq -r '[.items[] | select(.name == "${{ matrix.service }}") | select(.name == "admin" or .preferred).version] | join(",")' )
+          versions=$( cat discovery-artifact-manager/discoveries/index.json | jq -r '[.items[] | select(.name == "${{ matrix.service }}") | select(.name == "safebrowsing" or .preferred).version] | join(",")' )
           echo "::set-output name=versions::$versions"
       - run: ./google-api-php-client-services/.github/workflows/generate.sh ${{ matrix.service }} ${{ steps.find-preferred-versions.outputs.versions }}
       - uses: googleapis/code-suggester@v4
